@@ -1,0 +1,14 @@
+How to install nestjs in the system
+npm i -g @nestjs/cli
+
+create a new project
+nest new project-name
+
+run project
+npm run start
+
+install mongodb 
+npm install mongoose @nestjs/mongoose
+
+setup typeorm 
+npm i --save @nestjs/typeorm typeorm
