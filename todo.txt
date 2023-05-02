@@ -12,3 +12,8 @@ npm install mongoose @nestjs/mongoose
 
 setup typeorm 
 npm i --save @nestjs/typeorm typeorm
+
+
+create a module using this command
+nest g module (module_name)
+
