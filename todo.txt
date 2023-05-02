@@ -5,7 +5,7 @@ create a new project
 nest new project-name
 
 run project
-npm run start
+npm run start/ npm run start:dev
 
 install mongodb 
 npm install mongoose @nestjs/mongoose
@@ -13,7 +13,22 @@ npm install mongoose @nestjs/mongoose
 setup typeorm 
 npm i --save @nestjs/typeorm typeorm
 
+installtion config
+npm i  @nestjs/config
 
 create a module using this command
 nest g module (module_name)
 
+create a controller
+nest g controller (controller_name)
+
+create a services
+nest g service (service_name)
+
+create a entity file
+touch src/users/user.entity.ts
+
+
+use enviornment varible in all file add thi line in the app.module file
+import { ConfigModule } from '@nestjs/config';
+use in import ConfigModule.forRoot()
