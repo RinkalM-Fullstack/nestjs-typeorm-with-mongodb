@@ -8,10 +8,12 @@ run project
 npm run start/ npm run start:dev
 
 install mongodb 
+npm i mongodb --save
 npm install mongoose @nestjs/mongoose
 
 setup typeorm 
-npm i --save @nestjs/typeorm typeorm
+npm i typeorm --save
+npm i --save @nestjs/typeorm
 
 installtion config
 npm i  @nestjs/config
