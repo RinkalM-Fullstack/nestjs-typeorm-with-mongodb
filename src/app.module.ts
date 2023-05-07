@@ -4,13 +4,16 @@ import { AppService } from './app.service';
 import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ormConfig } from './database/config/ormConfig';
-
+import { UserModule } from './user/user.module';
+import configuration from './configuration/configuration';
+// console.log(process.env.MONGO_URL,"mongo_url")
 
 @Module({
-  imports: [ConfigModule.forRoot({
-    isGlobal: true,
-  }),
-  TypeOrmModule.forRoot(ormConfig()),],
+  imports: [ConfigModule.forRoot({ isGlobal: true, load: [configuration] }),
+
+  TypeOrmModule.forRoot(ormConfig()),
+  UserModule,
+],
   controllers: [AppController],
   providers: [AppService],
 })

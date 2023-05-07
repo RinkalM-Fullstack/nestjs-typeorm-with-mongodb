@@ -1,7 +1,9 @@
+require('dotenv').config({ path: `./config.env` })
+console.log(process.env.MONGO_URL,"mong945834ourl")
 export function ormConfig(): any {
     return {
         "type": "mongodb",
-        "url": process.env.MONGOURL,
+        "url": process.env.MONGO_URL,
         "useNewUrlParser": true,
         "synchronize": true,
         "logging": true,
