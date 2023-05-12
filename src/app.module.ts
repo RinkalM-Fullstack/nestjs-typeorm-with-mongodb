@@ -1,4 +1,4 @@
-import { Module } from '@nestjs/common';
+import { MiddlewareConsumer, Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { ConfigModule } from '@nestjs/config';
@@ -7,6 +7,7 @@ import { ormConfig } from './database/config/ormConfig';
 import { UserModule } from './modules/user/user.module';
 import { CommonModule } from './common/common.module';
 import configuration from './configuration/configuration';
+import { LoggerMiddleware } from './custom/middleware/logger.middleware';
 // console.log(process.env.MONGO_URL,"mongo_url")
 
 @Module({
@@ -19,4 +20,8 @@ import configuration from './configuration/configuration';
   controllers: [AppController],
   providers: [AppService],
 })
-export class AppModule { }
+export class AppModule {
+  configure(consumer: MiddlewareConsumer) {
+    consumer.apply(LoggerMiddleware).forRoutes("*");
+  }
+}

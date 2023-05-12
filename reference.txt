@@ -1,1 +1,4 @@
 https://bobbyhadz.com/blog/typescript-cannot-find-module-fs
+
+
+https://engineering.udacity.com/5-steps-to-create-professional-api-routes-in-next-js-201e726ead48
